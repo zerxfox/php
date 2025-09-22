@@ -16,13 +16,13 @@ $age = 23;
 	- Измените код так, чтобы каждая фраза начиналась с новой строки.
 	- Изолируйте код PHP от HTML-разметки.
 	*/
-// Весь PHP-код изолирован в одном блоке
-echo "Меня зовут: $name<br>";
-echo "Мне $age лет<br>";
-echo "Тип переменной \$name - " . gettype($name) . "<br>";
-echo "Тип переменной \$age - " . gettype($age) . "<br>";
 
-// Удаляем переменные
+// Весь PHP-код изолирован в одном блоке
+$outputName = "Меня зовут: $name";
+$outputAge = "Мне $age лет";
+$outputTypeName = "Тип переменной \$name - ".gettype($name);
+$outputTypeAge = "Тип переменной \$age - ".gettype($age);
+
 unset($name, $age);
 ?>
 
@@ -34,6 +34,9 @@ unset($name, $age);
 </head>
 <body>
   <h1>Переменные и вывод</h1>
-  <!-- Вывод уже выполнен в PHP -->
+  <p><?= $outputName ?><br>
+     <?= $outputAge ?><br>
+     <?= $outputTypeName ?><br>
+     <?= $outputTypeAge ?></p>
 </body>
 </html>
