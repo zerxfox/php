@@ -2,29 +2,6 @@
 declare(strict_types=1);
 
 /**
- * Функция swap(), которая меняет местами аргументы, переданные по ссылке
- * 
- * @param mixed $a Первая переменная (передаётся по ссылке)
- * @param mixed $b Вторая переменная (передаётся по ссылке)
- * @param mixed $temp Временная переменная (меняет значения Первой и Второй переменных местами)
- */
-function swap(&$a, &$b): void
-{
-    $temp = $a;
-    $a = $b;
-    $b = $temp;
-}
-
-// Пример использования функции swap()
-$a = 5;
-$b = 8;
-echo "До swap: a = $a, b = $b<br>";
-swap($a, $b);
-echo "После swap: a = $a, b = $b<br>";
-echo "5 === \$b: " . (5 === $b ? 'true' : 'false') . "<br>";
-echo "8 === \$a: " . (8 === $a ? 'true' : 'false') . "<br><br>";
-
-/**
  * Генерирует HTML таблицу умножения
  * 
  * @param int $cols Количество столбцов (по умолчанию 5)
@@ -126,3 +103,4 @@ function getTable(int $cols = 5, int $rows = 5, string $color = 'yellow'): int
 </body>
 
 </html>
+
