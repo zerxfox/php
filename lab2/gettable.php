@@ -6,6 +6,7 @@ declare(strict_types=1);
  * 
  * @param mixed $a Первая переменная (передаётся по ссылке)
  * @param mixed $b Вторая переменная (передаётся по ссылке)
+ * @param mixed $temp Временная переменная (меняет значения Первой и Второй переменных местами)
  */
 function swap(&$a, &$b): void
 {
@@ -123,4 +124,5 @@ function getTable(int $cols = 5, int $rows = 5, string $color = 'yellow'): int
     echo "<p><strong>Общее количество вызовов функции getTable(): $count4</strong></p>";
     ?> 
 </body>
+
 </html>
