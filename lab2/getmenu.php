@@ -70,44 +70,16 @@ $leftMenu = createMenuArray();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Меню</title>
     <style>
-        .menu {
-            list-style-type: none;
-            margin: 0;	
-            padding: 0;
-        }
+       .menu {
+			list-style-type: none;
+			margin: 0;	
+			padding: 0;
+		}
 
-        .vertical li {
-            margin-bottom: 10px;
-        }
-
-        .horizontal li {
-            display: inline;
-            padding: 10px;
-            margin-right: 15px;
-            border-right: 1px solid #ccc;
-        }
-        
-        .horizontal li:last-child {
-            border-right: none;
-        }
-        
-        .menu a {
-            text-decoration: none;
-            color: #333;
-            padding: 5px 10px;
-            display: inline-block;
-            border: 1px solid #ddd;
-            border-radius: 3px;
-        }
-        
-        .menu a:hover {
-            background-color: #f5f5f5;
-        }
-        
-        .vertical a {
-            display: block;
-            width: 150px;
-        }
+		.horizontal li {
+			display: inline;
+			padding: 5px
+		}
     </style>
 </head>
 <body>
@@ -128,4 +100,5 @@ $leftMenu = createMenuArray();
     echo getMenu($leftMenu, false);
     ?> 
 </body>
+
 </html>
