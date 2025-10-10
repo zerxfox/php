@@ -6,6 +6,7 @@ declare(strict_types=1);
  * 
  * @param mixed $a Первая переменная (передаётся по ссылке)
  * @param mixed $b Вторая переменная (передаётся по ссылке)
+ * @param mixed $temp Временная переменная (меняет значения Первой и Второй переменных местами)
  */
 function swap(&$a, &$b): void
 {
@@ -102,3 +103,4 @@ $leftMenu = createMenuArray();
 </body>
 
 </html>
+
