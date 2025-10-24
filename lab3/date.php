@@ -129,29 +129,6 @@ $timeUntilBirthday = getTimeUntilBirthday($now, $birthday);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Использование функций даты и времени</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-        }
-        .welcome {
-            font-size: 24px;
-            color: #2c3e50;
-            margin-bottom: 20px;
-        }
-        .date-info {
-            background-color: #f8f9fa;
-            padding: 15px;
-            border-radius: 5px;
-            margin-bottom: 20px;
-        }
-        .birthday-info {
-            background-color: #e8f5e8;
-            padding: 15px;
-            border-radius: 5px;
-        }
-    </style>
 </head>
 <body>
     <h1>Использование функций даты и времени</h1>
