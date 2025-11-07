@@ -62,25 +62,16 @@ function getWelcomeMessage(int $hour): string
  */
 function formatRussianDate(int $timestamp): string
 {
-    $months = [
-        1 => 'января', 2 => 'февраля', 3 => 'марта', 4 => 'апреля',
-        5 => 'мая', 6 => 'июня', 7 => 'июля', 8 => 'августа',
-        9 => 'сентября', 10 => 'октября', 11 => 'ноября', 12 => 'декабря'
-    ];
+    $fmt = datefmt_create(
+        'ru_RU',
+        IntlDateFormatter::FULL,
+        IntlDateFormatter::MEDIUM,
+        'Europe/Moscow',
+        IntlDateFormatter::GREGORIAN,
+        "Сегодня d MMMM Y 'года', EEEE H:mm:ss"
+    );
     
-    $daysOfWeek = [
-        'воскресенье', 'понедельник', 'вторник', 'среда',
-        'четверг', 'пятница', 'суббота'
-    ];
-    
-    $date = getdate($timestamp);
-    $day = $date['mday'];
-    $month = $months[$date['mon']];
-    $year = $date['year'];
-    $dayOfWeek = $daysOfWeek[$date['wday']];
-    $time = date('H:i:s', $timestamp);
-    
-    return "Сегодня $day $month $year года, $dayOfWeek $time";
+    return datefmt_format($fmt, $timestamp);
 }
 
 /**
