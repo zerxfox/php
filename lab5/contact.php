@@ -11,11 +11,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($subject) || empty($body)) {
         $message = "<p>Пожалуйста, заполните все поля.</p>";
     } else {
-        $to = "f1172017@xsph.ru";
-        $from = "admin@center.ogu";
-        $headers = "From: $from\r\n" .
-            "Reply-To: $from\r\n" .
-            "Content-Type: text/plain; charset=utf-8";
+        $to = "max.korolyov2014@yandex.ru";
+        $headers = 'From: admin@center.ogu' . "\r\n" .
+                   'Reply-To: admin@center.ogu' . "\r\n" .
+                   'X-Mailer: PHP/' . phpversion();
 
         if (mail($to, $subject, $body, $headers)) {
             $message = "<p>Сообщение успешно отправлено!</p>";
@@ -32,7 +31,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <title>Контакты</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
